@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+  </PropertyGroup>
+
+  <!-- NuGet package metadata -->
+  <PropertyGroup>
+    <Product>Umbraco.Community.ExtensionEditor</Product>
+    <Title>Extension Editor for Umbraco</Title>
+    <Description>A workspace editor for creating Umbraco web component extensions.</Description>
+    <Version>6.0.0-alpha004</Version>
+    <Authors>Lee Kelleher</Authors>
+    <Company>Lee Kelleher</Company>
+    <Copyright>$([System.DateTime]::Now.Year) © $(Company)</Copyright>
+    <PackageId>Umbraco.Community.ExtensionEditor</PackageId>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/leekelleher/umbraco-extension-editor</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>umbraco umbraco-marketplace</PackageTags>
+    <RepositoryUrl>https://github.com/leekelleher/umbraco-extension-editor</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <Compile Remove="Constants\**" />
+    <Compile Remove="Helpers\**" />
+    <Compile Remove="Models\**" />
+    <Content Remove="Models\**" />
+    <EmbeddedResource Remove="Constants\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Constants\**" />
+    <None Remove="Helpers\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="14.3.0-rc" />
+  </ItemGroup>
+</Project>
