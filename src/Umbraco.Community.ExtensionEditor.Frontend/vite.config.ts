@@ -6,15 +6,17 @@ dotenv.config();
 export default defineConfig({
     build: {
         lib: {
-            entry: "src/index.ts",
+            entry: "src/manifests.ts",
             formats: ["es"],
-            fileName: "extension-editor",
         },
-        outDir: './../Umbraco.Community.ExtensionEditor.Backend/wwwroot/App_Plugins/extension-editor',
+        outDir: './../Umbraco.Community.ExtensionEditor.Backend/wwwroot/App_Plugins/ExtensionEditor',
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {
             external: [/^@umbraco/],
+            output: {
+                chunkFileNames: '[name].js',
+            }
         },
     },
 });

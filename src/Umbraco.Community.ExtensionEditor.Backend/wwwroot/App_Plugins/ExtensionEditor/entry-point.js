@@ -4,4 +4,4 @@ const n = async (o) => {
 export {
   n as onInit
 };
-//# sourceMappingURL=extension-editor.js.map
+//# sourceMappingURL=entry-point.js.map
