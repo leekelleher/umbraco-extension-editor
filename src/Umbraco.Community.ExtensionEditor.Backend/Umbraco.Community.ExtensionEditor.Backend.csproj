@@ -11,7 +11,7 @@
     <Product>Umbraco.Community.ExtensionEditor</Product>
     <Title>Extension Editor for Umbraco</Title>
     <Description>A workspace editor for creating Umbraco web component extensions.</Description>
-    <Version>6.0.0-alpha004</Version>
+    <Version>0.1.0</Version>
     <Authors>Lee Kelleher</Authors>
     <Company>Lee Kelleher</Company>
     <Copyright>$([System.DateTime]::Now.Year) © $(Company)</Copyright>
