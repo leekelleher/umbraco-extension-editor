@@ -12,3 +12,4 @@ Thumbs.db
 .idea
 .vs
 node_modules/
+/src/Umbraco.Community.ExtensionEditor.Backend/wwwroot/App_Plugins/
